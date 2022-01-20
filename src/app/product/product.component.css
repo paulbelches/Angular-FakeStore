@@ -1,0 +1,30 @@
+.main{
+    /*border-style: solid;*/
+    margin-top: 10px;
+    display: flex;
+    min-width: 250px;
+    flex-direction: column;
+}
+.imageContainer {
+    display: flex;
+    height: 225px;
+    justify-content: center; 
+    align-items: center;
+}
+
+.productInfo {
+    display: flex;  
+    flex-wrap: wrap;
+    width: 250px;
+    flex-direction: column;
+}
+
+.productInfo p {
+    margin:0;
+}
+
+.productInfo h4 {
+    margin-bottom:0;
+}
+
+

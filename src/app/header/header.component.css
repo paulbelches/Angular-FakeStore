@@ -1,0 +1,25 @@
+
+  span {
+    font-size: 14px;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .header { 
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+  .header img {
+    margin: 0 16px;
+  }

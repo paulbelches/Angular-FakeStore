@@ -1,0 +1,10 @@
+.main {
+    /*background-color: magenta;*/
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    align-content: flex-start;
+    padding-top: 30px;
+}
