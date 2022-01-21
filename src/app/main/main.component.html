@@ -1,4 +1,4 @@
 <div class="main">
-    <side-bar></side-bar>
-    <display></display>
+    <side-bar (filtersEvent)="receiveFilters($event)"></side-bar>
+    <display [products] ='filterProducts'></display>
 </div>

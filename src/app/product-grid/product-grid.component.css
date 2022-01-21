@@ -4,7 +4,8 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; 
+    /*justify-content: space-around; */
     align-content: flex-start;
+    align-items: flex-start;
     padding-top: 30px;
 }

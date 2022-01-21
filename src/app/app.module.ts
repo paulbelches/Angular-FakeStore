@@ -9,6 +9,14 @@ import { DisplayComponent } from './display/display.component';
 import { ProductGridComponent } from './product-grid/product-grid.component';
 import { ProductComponent } from './product/product.component';
 import { FiltersComponent } from './filters/filters.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { ProductViewComponent } from './product-view/product-view.component';
+
+import {MatRadioModule} from '@angular/material/radio';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -19,10 +27,17 @@ import { FiltersComponent } from './filters/filters.component';
     DisplayComponent,
     ProductGridComponent,
     ProductComponent,
-    FiltersComponent
+    FiltersComponent,
+    ProductViewComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+
+    MatRadioModule,
+    MatCheckboxModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

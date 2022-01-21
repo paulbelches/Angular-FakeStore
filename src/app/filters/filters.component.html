@@ -1,39 +1,36 @@
-<div>
+<div class="main">  
     <h3>Order</h3>
-    <form>
-        <input type="checkbox" id="price1" name="price1" value="price1">
-        <label for="price1"> ASCD</label><br>
-        <input type="checkbox" id="price2" name="price2" value="price2">
-        <label for="price2"> DESC</label><br>
-    </form>
+    <section class="example-section">
+        <mat-radio-group 
+            [(ngModel)]="order"
+            (ngModelChange)="sendFilters()"
+            >
+            <mat-radio-button class="example-margin" value="ASCD">Ascendent</mat-radio-button>
+            <mat-radio-button class="example-margin" value="DESC">Descendant</mat-radio-button>
+        </mat-radio-group>
+    </section>
+      
     <h3>Price</h3>
-    <form>
-        <input type="checkbox" id="price1" name="price1" value="price1">
-        <label for="price1"> Any price</label><br>
-        <input type="checkbox" id="price2" name="price2" value="price2">
-        <label for="price2"> Under $25</label><br>
-        <input type="checkbox" id="price3" name="price3" value="price3">
-        <label for="price3"> $25 to $50</label><br>
-        <input type="checkbox" id="price4" name="price4" value="price4">
-        <label for="price4"> $50 to $100</label><br>
-        <input type="checkbox" id="price5" name="price5" value="price5">
-        <label for="price5"> $100 to $200</label><br>
-        <input type="checkbox" id="price6" name="price6" value="price6">
-        <label for="price6"> $200 & Above</label><br>
-    </form>
-    <h3>Brand</h3>
-    <form>
-        <input type="checkbox" id="price1" name="price1" value="price1">
-        <label for="price1"> Any price</label><br>
-        <input type="checkbox" id="price2" name="price2" value="price2">
-        <label for="price2"> Under $25</label><br>
-        <input type="checkbox" id="price3" name="price3" value="price3">
-        <label for="price3"> $25 to $50</label><br>
-        <input type="checkbox" id="price4" name="price4" value="price4">
-        <label for="price4"> $50 to $100</label><br>
-        <input type="checkbox" id="price5" name="price5" value="price5">
-        <label for="price5"> $100 to $200</label><br>
-        <input type="checkbox" id="price6" name="price6" value="price6">
-        <label for="price6"> $200 & Above</label><br>
-    </form>
+    <section>
+        <mat-radio-group 
+            [(ngModel)]="priceRange"
+            (ngModelChange)="sendFilters()"
+            >
+            <mat-radio-button class="example-margin" value="0">Any price</mat-radio-button>
+            <mat-radio-button class="example-margin" value="1">Under $25</mat-radio-button>
+            <mat-radio-button class="example-margin" value="2">$25 to $50</mat-radio-button>
+            <mat-radio-button class="example-margin" value="3">$50 to $100</mat-radio-button>
+            <mat-radio-button class="example-margin" value="4">$100 to $200</mat-radio-button>
+            <mat-radio-button class="example-margin" value="5">$200 & Above</mat-radio-button>
+        </mat-radio-group>
+    </section>
+
+    <!--
+    <section class="example-section" >
+        <h4>Select your toppings:</h4>
+        <p><mat-checkbox formControlName="pepperoni">Pepperoni</mat-checkbox></p>
+        <p><mat-checkbox formControlName="extracheese">Extra Cheese</mat-checkbox></p>
+        <p><mat-checkbox formControlName="mushroom">Mushroom</mat-checkbox></p>
+    </section>
+-->
 </div>

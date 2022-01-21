@@ -1,14 +1,7 @@
-<div class = "main">
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
-    <app-product></app-product>
+<div class = "main" >
+    <app-product 
+        *ngFor="let product of products; index as i; "
+        [product] ='product'
+    >
+    </app-product>
 </div>
