@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'product-grid',
@@ -8,11 +9,12 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class ProductGridComponent implements OnInit {
   
-  @Input() products: any = {}; 
+  products: any = {}; 
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit(): void {
+    this.data.currentFilterProduct.subscribe(message => this.products = message)
   }
 
 }

@@ -1,4 +1,4 @@
-<div class = "main" >
+<div class = "main" *ngIf="products.length > 0;" >
     <app-product 
         *ngFor="let product of products; index as i; "
         [product] ='product'

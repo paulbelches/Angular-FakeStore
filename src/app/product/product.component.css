@@ -43,3 +43,8 @@ img {
 }
 
 
+.ratingComponent {
+    display: flex;
+    flex-direction: row;
+    color: grey;
+}

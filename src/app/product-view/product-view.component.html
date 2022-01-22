@@ -1,15 +1,32 @@
-<div class="main">
-    <div class="imageContainer">
-        <img 
-            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" 
-            alt="product" 
-        >
-    </div>
-    <div class="productInfo">
-        <h1>Title</h1>
-        <p>category</p>
-        <p>rate</p>
-        <p>description</p>
-        <p>price</p>
+<div>
+    <h3 class="navmenu"><a [routerLink]="'/'">Products </a> > {{product.title}}</h3>
+    <div class="main" *ngIf="!loading">
+        <div class="imageContainer">
+            
+            <img 
+                src="{{product.image}}" 
+                alt="product" 
+            >
+        </div>
+        <div class="productInfoContainer">
+            <div class="productInfo">
+                <h1>{{product.title}}</h1>
+                <!-- category box -->
+                <mat-chip class="box">
+                    {{product.category}}
+                </mat-chip>
+                <!-- rating stars -->
+                <div class="ratingComponent">
+                    <ng-rating-bar
+                        [value]="product.rating.rate"
+                        [ratingCount]="5"
+                        [disabled]="true"
+                    ></ng-rating-bar>
+                    <h4 >({{product.rating.count}})</h4>
+                </div>  
+                <p align="justify">{{product.description}}</p>
+                <h1>US${{product.price}}</h1>
+            </div>
+        </div>
     </div>
 </div>

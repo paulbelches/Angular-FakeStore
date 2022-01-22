@@ -5,7 +5,10 @@ import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent},
-  { path: 'products', component: ProductViewComponent}
+  { 
+    path: 'products/:id', 
+    component: ProductViewComponent
+  }
 ];
 
 @NgModule({

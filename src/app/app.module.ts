@@ -12,11 +12,16 @@ import { FiltersComponent } from './filters/filters.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { ProductViewComponent } from './product-view/product-view.component';
-
+import { HttpClientModule } from '@angular/common/http';
+//Material
+import {MatChipsModule} from '@angular/material/chips';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { AppRoutingModule } from './app-routing.module';
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+//Rating starts
+import { NgRatingBarModule } from 'ng-rating-bar';
+//Data Service
 
 @NgModule({
   declarations: [
@@ -34,10 +39,15 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-
+    HttpClientModule,
+    //Material
     MatRadioModule,
     MatCheckboxModule,
     AppRoutingModule,
+    MatChipsModule,
+    MatProgressSpinnerModule,
+    //Rating starts
+    NgRatingBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

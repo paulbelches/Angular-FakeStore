@@ -1,5 +1,5 @@
 <div class="main">
-    <a routerLink="/products">
+    <a [routerLink]="['/products', product.id]">
     <div class="imageContainer">
         <img 
             src="{{ product?.image }} " 
@@ -8,8 +8,15 @@
     </div>
     <div class="productInfo">
         <h4>{{ product?.title }}</h4>
-        <p>{{ product?.rating?.rate }}/9</p>
-        <p>{{ product?.price }}</p>
+        <div class="ratingComponent">
+            <ng-rating-bar
+                [value]="product.rating.rate"
+                [ratingCount]="5"
+                [disabled]="true"
+            ></ng-rating-bar>
+            <h4 >({{product.rating.count}})</h4>
+        </div> 
+        <h3>US${{product.price}}</h3>
     </div>
     </a>
 </div>
