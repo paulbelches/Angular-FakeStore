@@ -12,8 +12,6 @@ export class FiltersComponent implements OnInit {
   products: Array<any> = []
   filterProducts: Array<any> = []
 
-  catergory: Array<string> = []
-
   order: string = "";
   priceRange: string = "0";
 
@@ -58,13 +56,14 @@ export class FiltersComponent implements OnInit {
 
   ngOnInit(): void {
     this.data.currentProduct.subscribe(message => this.products = message)
+    this.data.currentFilterProduct.subscribe(message => this.filterProducts = message)
     /*
-    this.catergory = (this.products) ? 
+    this.categories = (this.products) ? 
     this.products.map(product => product.category).filter((element, index) => {
       return this.products.map(product => product.category).indexOf(element) === index;
     })
     :
-    []*/ 
+    []*/
 
   }
 
