@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { DataService } from '../data.service';
 import { HttpClient } from '@angular/common/http';
 import {ThemePalette} from '@angular/material/core';
@@ -16,7 +16,17 @@ export class ProductViewComponent implements OnInit {
   readonly URL = 'https://fakestoreapi.com'
   
   id: any = ""
-  product: any = {}
+  product: any = {
+    "image": "", 
+    "title": "",
+    "category": "",
+    "description": "",
+    "price": "",
+    "rating": {
+      "rate":"",
+      "count": ""
+    }
+  }
   loading: boolean =  true
 
   products: Array<any> = []; 

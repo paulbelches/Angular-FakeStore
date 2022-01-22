@@ -22,4 +22,11 @@ describe('ProductComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  /*
+  it('should have skyblue <h2>', () => {
+    const h2: HTMLElement = fixture.nativeElement.querySelector('h2');
+    const bgColor = h2.style.backgroundColor;
+    expect(bgColor).toBe('skyblue');
+  });*/
 });

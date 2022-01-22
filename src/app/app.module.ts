@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ActivatedRoute } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
@@ -12,7 +12,7 @@ import { FiltersComponent } from './filters/filters.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { ProductViewComponent } from './product-view/product-view.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 //Material
 import {MatChipsModule} from '@angular/material/chips';
 import {MatRadioModule} from '@angular/material/radio';
@@ -40,6 +40,7 @@ import { NgRatingBarModule } from 'ng-rating-bar';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    ActivatedRoute,
     //Material
     MatRadioModule,
     MatCheckboxModule,
@@ -49,7 +50,7 @@ import { NgRatingBarModule } from 'ng-rating-bar';
     //Rating starts
     NgRatingBarModule,
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

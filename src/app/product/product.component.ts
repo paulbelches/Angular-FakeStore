@@ -7,7 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  @Input() product: any = {};
+  @Input() product: any = {
+    "image": "", 
+    "title": "",
+    "category": "",
+    "description": "",
+    "price": "",
+    "rating": {
+      "rate":"",
+      "count": ""
+    }
+  };
 
   constructor() { }
 
