@@ -11,7 +11,7 @@ export class AppComponent {
   
   readonly URL = 'https://fakestoreapi.com'
   
-  title = 'Angular-FakeStore';
+  title = 'FakeStore';
 
   apiProducts: any
 

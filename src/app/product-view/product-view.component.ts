@@ -16,17 +16,7 @@ export class ProductViewComponent implements OnInit {
   readonly URL = 'https://fakestoreapi.com'
   
   id: any = ""
-  product: any = {
-    "image": "", 
-    "title": "",
-    "category": "",
-    "description": "",
-    "price": "",
-    "rating": {
-      "rate":"",
-      "count": ""
-    }
-  }
+  product: any = {}
   loading: boolean =  true
 
   products: Array<any> = []; 
@@ -43,7 +33,6 @@ export class ProductViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.loading = true;
-    console.log("first", this.loading)
     this.route.paramMap.subscribe(params => {
       this.id = params.get("id")
       this.data.currentProduct.subscribe(message => this.products = message)
